@@ -37,6 +37,12 @@ public class CustomerController {
 				customerRepository.findAll());
 	}
 
+	@RequestMapping("/ping")
+	public String ping() {
+		System.out.println("**** in id.html-- 2");
+		return "Pinging -- Customer MS ";
+	}
+
 	@RequestMapping(value = "/form.html", method = RequestMethod.GET)
 	public ModelAndView add() {
 		System.out.println("**** in id.html -- 3");
